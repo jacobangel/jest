@@ -170,9 +170,9 @@ Returns the `jest` object for chaining.
 
 ### `jest.unmock(moduleName)`
 
-Indicates that the module system should never return a mocked version of the specified module from `require()` (e.g. that it should always return the real module).
+Indicates that the module system should return the real module instead of a mocked version of the specified in the import or requires statement.
 
-The most common use of this API is for specifying the module a given test intends to be testing (and thus doesn't want automatically mocked).
+The most common use of `jest.unmock` is to prevent jest from automatically mocking a module that is being intentionally used in the test file.
 
 Returns the `jest` object for chaining.
 
